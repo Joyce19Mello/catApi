@@ -9,6 +9,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface BreedsMapper {
     BreedsMapper INSTANCE = Mappers.getMapper(BreedsMapper.class);
-    BreedsDTO breedToBreedDto(BreedsModel breed);
     BreedsModel breedToBreedEntity(BreedsDTO breedsDTO);
+    BreedsDTO breedToBreedDto(BreedsModel breedsModel);
 }

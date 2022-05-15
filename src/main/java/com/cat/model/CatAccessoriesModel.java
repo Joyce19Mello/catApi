@@ -21,11 +21,21 @@ public class CatAccessoriesModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "typeAccessorie")
-    private TypeAccessoriesCat typeAccessorie;
+    @Column(name = "breed")
+    private String breed;
 
-    @Column(name = "url")
-    private String url;
+    @Column(name = "picture_url")
+    private String pictureUrl;
+
+    @Column(name = "picture_url_2")
+    private String pictureUrl2;
+
+    @Column(name = "picture_url_3")
+    private String pictureUrl3;
+
+    @Column(name = "type_accessorie")
+    private String typeAccessoriesCat;
+
 
     public CatAccessoriesDTO toDTO() {
         return CatAccessoriesMapper.INSTANCE.catAccessoriesToDTO(this);

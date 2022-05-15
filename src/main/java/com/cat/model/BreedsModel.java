@@ -28,22 +28,24 @@ public class BreedsModel {
     @Column(name = "temperament")
     private String temperament;
 
+    @Column(name = "breed")
+    private String breed;
+
+    @Column(name = "picture_url")
+    private String pictureUrl;
+
+    @Column(name = "picture_url_2")
+    private String pictureUrl2;
+
+    @Column(name = "picture_url_3")
+    private String pictureUrl3;
+
     @Column(name = "description")
     @Size(min = 10, max = 1000)
     private String description;
 
-    @Column(name = "picture1")
-    private String picture1;
-
-    @Column(name = "picture2")
-    private String picture2;
-
-    @Column(name = "picture3")
-    private String picture3;
-
     public BreedsDTO toDto() {
         return BreedsMapper.INSTANCE.breedToBreedDto(this);
     }
-
 
 }

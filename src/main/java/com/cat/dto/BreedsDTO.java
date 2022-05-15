@@ -2,7 +2,7 @@ package com.cat.dto;
 
 import com.cat.mapper.BreedsMapper;
 import com.cat.model.BreedsModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -11,46 +11,27 @@ import javax.validation.constraints.NotNull;
 public class BreedsDTO {
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "Egypt",
-            value = "Origem do cat")
     private String origin;
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "POUPANCA",
-            value = "tipo da conta em que o saldo que será adicionado")
+    @JsonProperty("id")
+    private String breed;
+
+    @NotNull
     private String temperament;
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "POUPANCA",
-            value = "tipo da conta em que o saldo que será adicionado")
     private String description;
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "POUPANCA",
-            value = "tipo da conta em que o saldo que será adicionado")
-    private String picture1;
+    @JsonProperty("image")
+    private ImageDTO image;
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "POUPANCA",
-            value = "tipo da conta em que o saldo que será adicionado")
-    private String picture2;
+    private String image2;
 
     @NotNull
-    @ApiModelProperty(
-            required = true,
-            example = "POUPANCA",
-            value = "tipo da conta em que o saldo que será adicionado")
-    private String picture3;
+    private String image3;
 
     public BreedsModel toEntity() {
         return BreedsMapper.INSTANCE.breedToBreedEntity(this);

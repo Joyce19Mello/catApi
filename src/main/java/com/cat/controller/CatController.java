@@ -1,6 +1,6 @@
 package com.cat.controller;
 
-import com.cat.SwaggerConfig;
+import com.cat.config.SwaggerConfig;
 import com.cat.request.BreedsRequest;
 import com.cat.request.CatAccessoriesRequest;
 import com.cat.exception.BusinessErrorResponse;
@@ -114,7 +114,7 @@ public class CatController {
                     code = 400,
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
-    @GetMapping("/cat/breed/temperament")
+    @GetMapping("/cat/breed/origin")
     public ResponseEntity<List<BreedsModel>> getCatOrigin(@ApiParam(value = "Origem do gato", example = "United States ou United Arab Emirates", required = true)
                                                                 @RequestParam(value = "origin") @Valid String origin) {
         log.info("Relizando a busca do gato pela origem a seguir: " + origin);

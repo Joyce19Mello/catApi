@@ -1,4 +1,4 @@
-package com.cat;
+package com.cat.config;
 
 import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 

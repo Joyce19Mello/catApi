@@ -1,11 +1,8 @@
-package com.cat;
+package com.cat.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -20,7 +17,8 @@ import java.util.List;
 @EnableSwagger2
 public class SwaggerConfig implements SwaggerConfigInterface {
 
-    private static final String DESCRIPTION_API = "#### Serviços ....";
+    private static final String DESCRIPTION_API = "#### Aplicação desenvolvida para fins de um processo seletivo. A mesma consta com banco de dados relacional mysql(RDS) na AWS \n" +
+            "- **Fazemos o uso da api https://api.thecatapi.com/v1/ para popular o banco**: A api traz informações de raça, imagens entre outras\n";
 
     private static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
             "cat-api-itau API", DESCRIPTION_API, "1.0",
@@ -43,7 +41,6 @@ public class SwaggerConfig implements SwaggerConfigInterface {
                         new Tag(CAT_INSERT_DATABASE_CONTROLLER, "Inserção direta no banco de dados caso o mesmo esteja vazio", 0),
                         new Tag(CAT_CONTROLLER, "Consultas e inserção de informações de gatinhos", 1));
     }
-
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

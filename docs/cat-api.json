@@ -1,0 +1,1034 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "#### Aplicação desenvolvida para fins de um processo seletivo. A mesma consta com banco de dados relacional mysql(RDS) na AWS \n- **Fazemos o uso da api https://api.thecatapi.com/v1/ para popular o banco**: A api traz informações de raça, imagens entre outras\n",
+    "version": "1.0",
+    "title": "cat-api-itau API",
+    "termsOfService": "urn:tos",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/cat-api-itau",
+  "tags": [
+    {
+      "name": "cat-insert-database-controller",
+      "description": "Inserção direta no banco de dados caso o mesmo esteja vazio"
+    },
+    {
+      "name": "cat-controller",
+      "description": "Consultas e inserção de informações de gatinhos"
+    },
+    {
+      "name": "basic-error-controller",
+      "description": "Basic Error Controller"
+    }
+  ],
+  "paths": {
+    "/error": {
+      "get": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingGET",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "head": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingHEAD",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingDELETE",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "options": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingOPTIONS",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api-insert/breeds/apiTheCat": {
+      "post": {
+        "tags": [
+          "cat-insert-database-controller"
+        ],
+        "summary": "Inserindo dados de raça api.thecatapi.com no banco de dados",
+        "operationId": "insertBreedsUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "Inserção na base de dados concluida",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api-insert/insert/hats/apiTheCat": {
+      "post": {
+        "tags": [
+          "cat-insert-database-controller"
+        ],
+        "summary": "Inserindo dados de urls de gatos de chapéu da api.thecatapi.com no banco de dados",
+        "operationId": "insertCatHatUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "Inserção na base de dados concluida",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api-insert/sunglasses/apiTheCat": {
+      "post": {
+        "tags": [
+          "cat-insert-database-controller"
+        ],
+        "summary": "Inserindo dados de urls de gatos de óculos da api.thecatapi.com no banco de dados",
+        "operationId": "insertCatSunglassesUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "Inserção na base de dados concluida",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/accessories/insert": {
+      "post": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Inserir dados de acessórios de gatos no banco de dados",
+        "operationId": "insertAccessoriesUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CatAccessoriesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Inserção na base de dados concluida",
+            "schema": {
+              "$ref": "#/definitions/CatAccessoriesModel"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/breeds": {
+      "get": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Trazer todos os registros no banco de raças",
+        "operationId": "getBreedsUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "Busca por dados de raça concluída",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BreedsModel"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/breeds/insert": {
+      "post": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Inserir dados de raça no banco de dados",
+        "operationId": "insertBreedsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BreedsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Inserção na base de dados concluida",
+            "schema": {
+              "$ref": "#/definitions/BreedsModel"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/cat/breed": {
+      "get": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Trazer o registro no banco de uma raça específica",
+        "operationId": "getCatForBreedUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "breed",
+            "in": "query",
+            "description": "Raça do gato",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false,
+            "x-example": "abys"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Busca por raça concluída",
+            "schema": {
+              "$ref": "#/definitions/BreedsModel"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/cat/breed/origin": {
+      "get": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Trazer o registro no banco de uma origem específica",
+        "operationId": "getCatOriginUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "origin",
+            "in": "query",
+            "description": "Origem do gato",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false,
+            "x-example": "United States ou United Arab Emirates"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Busca por origem concluída",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BreedsModel"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1-cat-api/cat/breed/temperament": {
+      "get": {
+        "tags": [
+          "cat-controller"
+        ],
+        "summary": "Trazer o registro no banco de um temperamento específico",
+        "operationId": "getCatTemperamentUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "temperament",
+            "in": "query",
+            "description": "Temperamento do gato, pode-se usar somente um dos temperamentos ou todos juntos",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false,
+            "x-example": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Busca por raça concluída",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BreedsModel"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/BusinessErrorResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "BreedsModel": {
+      "type": "object",
+      "properties": {
+        "breed": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "origin": {
+          "type": "string"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "pictureUrl2": {
+          "type": "string"
+        },
+        "pictureUrl3": {
+          "type": "string"
+        },
+        "temperament": {
+          "type": "string"
+        }
+      },
+      "title": "BreedsModel"
+    },
+    "BreedsRequest": {
+      "type": "object",
+      "required": [
+        "description",
+        "id",
+        "image",
+        "image2",
+        "image3",
+        "origin",
+        "temperament"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "example": "Fácil de cuidar e afetuoso",
+          "description": "Informações do gato"
+        },
+        "id": {
+          "type": "string",
+          "example": "abys",
+          "description": "Raça"
+        },
+        "image": {
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "Objeto para pegar url da primeira imagem provinda da raça",
+          "$ref": "#/definitions/ImageBean"
+        },
+        "image2": {
+          "type": "string",
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "url da segunda imagem de uma específica raça"
+        },
+        "image3": {
+          "type": "string",
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "url da terceira imagem de uma específica raça"
+        },
+        "origin": {
+          "type": "string",
+          "example": "Egypt",
+          "description": "Origem da raça do gato"
+        },
+        "temperament": {
+          "type": "string",
+          "example": [
+            Intelligent,
+            Gentle
+          ],
+          "description": "Temperamento da raça gato"
+        }
+      },
+      "title": "BreedsRequest"
+    },
+    "BusinessErrorResponse": {
+      "type": "object",
+      "properties": {
+        "cause": {
+          "$ref": "#/definitions/Throwable"
+        },
+        "localizedMessage": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "stackTrace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StackTraceElement"
+          }
+        },
+        "suppressed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Throwable"
+          }
+        }
+      },
+      "title": "BusinessErrorResponse"
+    },
+    "CatAccessoriesModel": {
+      "type": "object",
+      "properties": {
+        "breed": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "pictureUrl2": {
+          "type": "string"
+        },
+        "pictureUrl3": {
+          "type": "string"
+        },
+        "typeAccessoriesCat": {
+          "type": "string"
+        }
+      },
+      "title": "CatAccessoriesModel"
+    },
+    "CatAccessoriesRequest": {
+      "type": "object",
+      "required": [
+        "id",
+        "image2",
+        "image3",
+        "typeAccessoriesCat",
+        "url"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "abys",
+          "description": "Raça"
+        },
+        "image2": {
+          "type": "string",
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "url da segunda imagem de uma específica raça"
+        },
+        "image3": {
+          "type": "string",
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "url da terceira imagem de uma específica raça"
+        },
+        "typeAccessoriesCat": {
+          "type": "string",
+          "example": [
+            OCULOS,
+            CHAPEU
+          ],
+          "description": "qual tipo de acessório o gato usa"
+        },
+        "url": {
+          "type": "string",
+          "example": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+          "description": "url da primeira imagem de uma específica raça"
+        }
+      },
+      "title": "CatAccessoriesRequest"
+    },
+    "ImageBean": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "ImageBean"
+    },
+    "ModelAndView": {
+      "type": "object",
+      "properties": {
+        "empty": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "object"
+        },
+        "modelMap": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "reference": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "100 CONTINUE",
+            "101 SWITCHING_PROTOCOLS",
+            "102 PROCESSING",
+            "103 CHECKPOINT",
+            "200 OK",
+            "201 CREATED",
+            "202 ACCEPTED",
+            "203 NON_AUTHORITATIVE_INFORMATION",
+            "204 NO_CONTENT",
+            "205 RESET_CONTENT",
+            "206 PARTIAL_CONTENT",
+            "207 MULTI_STATUS",
+            "208 ALREADY_REPORTED",
+            "226 IM_USED",
+            "300 MULTIPLE_CHOICES",
+            "301 MOVED_PERMANENTLY",
+            "302 FOUND",
+            "302 MOVED_TEMPORARILY",
+            "303 SEE_OTHER",
+            "304 NOT_MODIFIED",
+            "305 USE_PROXY",
+            "307 TEMPORARY_REDIRECT",
+            "308 PERMANENT_REDIRECT",
+            "400 BAD_REQUEST",
+            "401 UNAUTHORIZED",
+            "402 PAYMENT_REQUIRED",
+            "403 FORBIDDEN",
+            "404 NOT_FOUND",
+            "405 METHOD_NOT_ALLOWED",
+            "406 NOT_ACCEPTABLE",
+            "407 PROXY_AUTHENTICATION_REQUIRED",
+            "408 REQUEST_TIMEOUT",
+            "409 CONFLICT",
+            "410 GONE",
+            "411 LENGTH_REQUIRED",
+            "412 PRECONDITION_FAILED",
+            "413 PAYLOAD_TOO_LARGE",
+            "413 REQUEST_ENTITY_TOO_LARGE",
+            "414 URI_TOO_LONG",
+            "414 REQUEST_URI_TOO_LONG",
+            "415 UNSUPPORTED_MEDIA_TYPE",
+            "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+            "417 EXPECTATION_FAILED",
+            "418 I_AM_A_TEAPOT",
+            "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+            "420 METHOD_FAILURE",
+            "421 DESTINATION_LOCKED",
+            "422 UNPROCESSABLE_ENTITY",
+            "423 LOCKED",
+            "424 FAILED_DEPENDENCY",
+            "425 TOO_EARLY",
+            "426 UPGRADE_REQUIRED",
+            "428 PRECONDITION_REQUIRED",
+            "429 TOO_MANY_REQUESTS",
+            "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+            "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+            "500 INTERNAL_SERVER_ERROR",
+            "501 NOT_IMPLEMENTED",
+            "502 BAD_GATEWAY",
+            "503 SERVICE_UNAVAILABLE",
+            "504 GATEWAY_TIMEOUT",
+            "505 HTTP_VERSION_NOT_SUPPORTED",
+            "506 VARIANT_ALSO_NEGOTIATES",
+            "507 INSUFFICIENT_STORAGE",
+            "508 LOOP_DETECTED",
+            "509 BANDWIDTH_LIMIT_EXCEEDED",
+            "510 NOT_EXTENDED",
+            "511 NETWORK_AUTHENTICATION_REQUIRED"
+          ]
+        },
+        "view": {
+          "$ref": "#/definitions/View"
+        },
+        "viewName": {
+          "type": "string"
+        }
+      },
+      "title": "ModelAndView"
+    },
+    "StackTraceElement": {
+      "type": "object",
+      "properties": {
+        "classLoaderName": {
+          "type": "string"
+        },
+        "className": {
+          "type": "string"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "lineNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "methodName": {
+          "type": "string"
+        },
+        "moduleName": {
+          "type": "string"
+        },
+        "moduleVersion": {
+          "type": "string"
+        },
+        "nativeMethod": {
+          "type": "boolean"
+        }
+      },
+      "title": "StackTraceElement"
+    },
+    "Throwable": {
+      "type": "object",
+      "properties": {
+        "cause": {
+          "$ref": "#/definitions/Throwable"
+        },
+        "localizedMessage": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "stackTrace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StackTraceElement"
+          }
+        },
+        "suppressed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Throwable"
+          }
+        }
+      },
+      "title": "Throwable"
+    },
+    "View": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        }
+      },
+      "title": "View"
+    }
+  }
+}

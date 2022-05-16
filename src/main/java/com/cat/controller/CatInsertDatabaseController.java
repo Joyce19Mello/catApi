@@ -1,6 +1,6 @@
 package com.cat.controller;
 
-import com.cat.SwaggerConfig;
+import com.cat.config.SwaggerConfig;
 import com.cat.exception.BusinessErrorResponse;
 import com.cat.model.TypeAccessoriesCat;
 import com.cat.service.CatClientFlow;

@@ -1,6 +1,6 @@
 package com.cat.model;
 
-import com.cat.dto.BreedsDTO;
+import com.cat.request.BreedsRequest;
 import com.cat.mapper.BreedsMapper;
 import lombok.Data;
 
@@ -44,8 +44,8 @@ public class BreedsModel {
     @Size(min = 10, max = 1000)
     private String description;
 
-    public BreedsDTO toDto() {
-        return BreedsMapper.INSTANCE.breedToBreedDto(this);
+    public BreedsRequest toRequest() {
+        return BreedsMapper.INSTANCE.breedToBreedRequest(this);
     }
 
 }

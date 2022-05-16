@@ -1,7 +1,7 @@
 package com.cat.service;
 
-import com.cat.dto.BreedsDTO;
-import com.cat.dto.CatAccessoriesDTO;
+import com.cat.request.BreedsRequest;
+import com.cat.request.CatAccessoriesRequest;
 import com.cat.model.BreedsModel;
 import com.cat.model.CatAccessoriesModel;
 import com.cat.model.TypeAccessoriesCat;
@@ -43,9 +43,9 @@ public class CatClientFlow {
         this.catAccessoriesRepository = catAccessoriesRepository;
     }
 
-    public List<BreedsDTO> getBreeds() {
+    public List<BreedsRequest> getBreeds() {
         String url = hostApiCat + "breeds";
-        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, BreedsDTO[].class)));
+        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, BreedsRequest[].class)));
     }
 
     public String insertBreed() {
@@ -76,14 +76,14 @@ public class CatClientFlow {
         return "Inserção na base não pode ser concluida pois já existe os mesmos dados";
     }
 
-    public List<CatAccessoriesDTO> getImagesCatSunglasses() {
+    public List<CatAccessoriesRequest> getImagesCatSunglasses() {
         String url = hostApiCat + "images/search?category_ids={0}&limit={1}";
-        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, CatAccessoriesDTO[].class, 4, 3)));
+        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, CatAccessoriesRequest[].class, 4, 3)));
     }
 
-    public List<CatAccessoriesDTO> getImagesCatHats() {
+    public List<CatAccessoriesRequest> getImagesCatHats() {
         String url = hostApiCat + "images/search?category_ids={0}&limit={1}";
-        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, CatAccessoriesDTO[].class, 1, 3)));
+        return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, CatAccessoriesRequest[].class, 1, 3)));
     }
 
     public String insertImagesUrlsWithSunglassesOrHats(TypeAccessoriesCat typeAccessoriesCat) {

@@ -1,9 +1,9 @@
-package com.cat.dto;
+package com.cat.request;
 
 import lombok.Data;
 
 @Data
-public class ImageDTO {
+public class ImageBean {
     private String id;
     private Integer width;
     private Integer height;

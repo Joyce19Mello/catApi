@@ -1,6 +1,6 @@
 package com.cat.model;
 
-import com.cat.dto.CatAccessoriesDTO;
+import com.cat.request.CatAccessoriesRequest;
 import com.cat.mapper.CatAccessoriesMapper;
 import lombok.Data;
 
@@ -37,7 +37,7 @@ public class CatAccessoriesModel {
     private String typeAccessoriesCat;
 
 
-    public CatAccessoriesDTO toDTO() {
-        return CatAccessoriesMapper.INSTANCE.catAccessoriesToDTO(this);
+    public CatAccessoriesRequest toDTO() {
+        return CatAccessoriesMapper.INSTANCE.catAccessoriesToRequest(this);
     }
 }

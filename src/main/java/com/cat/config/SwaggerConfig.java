@@ -38,8 +38,9 @@ public class SwaggerConfig implements SwaggerConfigInterface {
                 .build()
                 .apiInfo(DEFAULT_API_INFO)
                 .tags(
-                        new Tag(CAT_INSERT_DATABASE_CONTROLLER, "Inserção direta no banco de dados caso o mesmo esteja vazio", 0),
-                        new Tag(CAT_CONTROLLER, "Consultas e inserção de informações de gatinhos", 1));
+                        new Tag(CAT_CONTROLLER, "Consultas e inserção de informações de gatinhos", 0),
+                        new Tag(CAT_INSERT_DATABASE_CONTROLLER, "Inserção direta no banco de dados caso o mesmo esteja vazio", 1)
+                );
     }
 
     @Override

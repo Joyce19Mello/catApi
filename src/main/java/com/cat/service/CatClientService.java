@@ -1,5 +1,6 @@
 package com.cat.service;
 
+import com.cat.exception.BusinessErrorResponse;
 import com.cat.request.BreedsRequest;
 import com.cat.request.CatAccessoriesRequest;
 import com.cat.model.BreedsModel;
@@ -20,7 +21,7 @@ import java.util.Objects;
 
 @Service
 @Slf4j
-public class CatClientFlow {
+public class CatClientService {
 
     private final BreedsRepository breedsRepository;
 
@@ -31,7 +32,7 @@ public class CatClientFlow {
     @Value("${host.api.thecat}")
     private String hostApiCat;
 
-    public CatClientFlow(BreedsRepository repository, CatAccessoriesRepository catAccessoriesRepository) {
+    public CatClientService(BreedsRepository repository, CatAccessoriesRepository catAccessoriesRepository) {
 
         rest = new RestTemplateBuilder(rt -> rt.getInterceptors().add((request, body, execution) -> {
             request.getHeaders()
@@ -46,6 +47,12 @@ public class CatClientFlow {
     public List<BreedsRequest> getBreeds() {
         String url = hostApiCat + "breeds";
         return Arrays.asList(Objects.requireNonNull(this.rest.getForObject(url, BreedsRequest[].class)));
+    }
+
+    public String databaseCleanup() {
+        breedsRepository.deleteAll();
+        catAccessoriesRepository.deleteAll();
+        return "Base limpa com sucesso";
     }
 
     public String insertBreed() {
@@ -70,10 +77,10 @@ public class CatClientFlow {
 
             });
             this.breedsRepository.saveAll(listBreeds);
-            return "Inserção na base de dados concluída";
+            return "Insercao na base de dados concluida";
         }
-        log.info("A inserção na base de dados não pode ser concluida pois já existe os mesmos dados");
-        return "Inserção na base não pode ser concluida pois já existe os mesmos dados";
+        log.info("A insercao na base de dados não pode ser concluida pois ja existe os mesmos dados");
+        return "Insercao na base nao pode ser concluida pois ja existe os mesmos dados";
     }
 
     public List<CatAccessoriesRequest> getImagesCatSunglasses() {
@@ -104,10 +111,10 @@ public class CatClientFlow {
                 listAccessories.add(model);
             });
             this.catAccessoriesRepository.saveAll(listAccessories);
-            return "Inserção na base de dados concluída";
+            return "Insercao na base de dados concluida";
         }
         log.info("A inserção na base de dados não pode ser concluida pois já existe os mesmos dados");
-        return "Inserção na base não pode ser concluida pois já existe os mesmos dados";
+        return "Insercao na base nao pode ser concluida pois ja existe os mesmos dados";
     }
 
 }

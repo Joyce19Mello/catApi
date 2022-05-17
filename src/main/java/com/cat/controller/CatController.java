@@ -83,8 +83,8 @@ public class CatController {
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed")
-    public ResponseEntity<BreedsModel> getCatForBreed(@ApiParam(value = "Raça do gato", example = "abys", required = true)
-                                                                @RequestParam(value = "breed") @Valid String breed) {
+    public ResponseEntity<BreedsModel> getCatBreed(@ApiParam(value = "Raça do gato", example = "abys", required = true)
+                                                      @RequestParam(value = "breed") @Valid String breed) {
         log.info("Relizando a busca do gato pela raça" + breed);
         return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByBreed(breed));
     }
@@ -100,7 +100,7 @@ public class CatController {
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed/temperament")
     public ResponseEntity<List<BreedsModel>> getCatTemperament(@ApiParam(value = "Temperamento do gato, pode-se usar somente um dos temperamentos ou todos juntos", example = "Active ou Energetic, Active, Independent, Intelligent, Gentle", required = true)
-                                                                @RequestParam(value = "temperament") @Valid String temperament) {
+                                                               @RequestParam(value = "temperament") @Valid String temperament) {
         log.info("Relizando a busca do gato pelo temperamento a seguir: " + temperament);
         return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByTemperamentContaining(temperament));
     }
@@ -116,7 +116,7 @@ public class CatController {
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed/origin")
     public ResponseEntity<List<BreedsModel>> getCatOrigin(@ApiParam(value = "Origem do gato", example = "United States ou United Arab Emirates", required = true)
-                                                                @RequestParam(value = "origin") @Valid String origin) {
+                                                          @RequestParam(value = "origin") @Valid String origin) {
         log.info("Relizando a busca do gato pela origem a seguir: " + origin);
         return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByOriginContaining(origin));
     }

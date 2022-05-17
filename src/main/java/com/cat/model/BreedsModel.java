@@ -1,8 +1,13 @@
 package com.cat.model;
 
-import com.cat.request.BreedsRequest;
 import com.cat.mapper.BreedsMapper;
-import lombok.Data;
+import com.cat.request.BreedsRequest;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,10 +16,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+import java.util.Objects;
 
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
 @Entity
 @Table(schema = "catapi", name = "breeds")
-@Data
 public class BreedsModel {
 
     @Id
@@ -44,8 +53,24 @@ public class BreedsModel {
     @Size(min = 10, max = 1000)
     private String description;
 
+    public BreedsModel() {
+
+    }
+
     public BreedsRequest toRequest() {
         return BreedsMapper.INSTANCE.breedToBreedRequest(this);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        BreedsModel that = (BreedsModel) o;
+        return id != null && Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

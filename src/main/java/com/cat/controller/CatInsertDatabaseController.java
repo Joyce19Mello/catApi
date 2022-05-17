@@ -3,7 +3,7 @@ package com.cat.controller;
 import com.cat.config.SwaggerConfig;
 import com.cat.exception.BusinessErrorResponse;
 import com.cat.model.TypeAccessoriesCat;
-import com.cat.service.CatClientFlow;
+import com.cat.service.CatClientService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-@RequestMapping("/v1-cat-api-insert")
+@RequestMapping("/v1-cat-api-databse")
 @CrossOrigin("*")
 @Api(value = "v1-cat-api-insert", tags = {SwaggerConfig.CAT_INSERT_DATABASE_CONTROLLER})
 public class CatInsertDatabaseController {
@@ -27,7 +27,23 @@ public class CatInsertDatabaseController {
     private static String DATABASE_CREATE = " Inserindo dados no banco de dados";
 
     @Autowired
-    private CatClientFlow catClientFlow;
+    private CatClientService catClientService;
+
+
+    @ApiOperation("Limpar base de dados para futuras inserções")
+    @ApiResponses({
+            @ApiResponse(
+                    code = 200,
+                    message = "Limpeza do banco concluida"),
+            @ApiResponse(
+                    code = 400,
+                    message = "Bad Request",
+                    response = BusinessErrorResponse.class)})
+    @PostMapping("/cleanup")
+    public ResponseEntity<String> databaseCleanup() {
+        log.info("[LIMPEZA BANCO]");
+        return ResponseEntity.status(HttpStatus.OK).body(catClientService.databaseCleanup());
+    }
 
     @ApiOperation("Inserindo dados de raça api.thecatapi.com no banco de dados")
     @ApiResponses({
@@ -41,7 +57,7 @@ public class CatInsertDatabaseController {
     @PostMapping("/breeds/apiTheCat")
     public ResponseEntity<String> insertBreeds() {
         log.info("[RAÇAS]" + DATABASE_CREATE);
-        return ResponseEntity.status(HttpStatus.CREATED).body(catClientFlow.insertBreed());
+        return ResponseEntity.status(HttpStatus.CREATED).body(catClientService.insertBreed());
     }
 
     @ApiOperation("Inserindo dados de urls de gatos de óculos da api.thecatapi.com no banco de dados")
@@ -56,7 +72,7 @@ public class CatInsertDatabaseController {
     @PostMapping("/sunglasses/apiTheCat")
     public ResponseEntity<String> insertCatSunglasses() {
         log.info("[" + TypeAccessoriesCat.GLASSES.getDescription() + "]" + DATABASE_CREATE);
-        return ResponseEntity.status(HttpStatus.CREATED).body(catClientFlow.insertImagesUrlsWithSunglassesOrHats(TypeAccessoriesCat.GLASSES));
+        return ResponseEntity.status(HttpStatus.CREATED).body(catClientService.insertImagesUrlsWithSunglassesOrHats(TypeAccessoriesCat.GLASSES));
     }
 
     @ApiOperation("Inserindo dados de urls de gatos de chapéu da api.thecatapi.com no banco de dados")
@@ -71,6 +87,6 @@ public class CatInsertDatabaseController {
     @PostMapping("/insert/hats/apiTheCat")
     public ResponseEntity<String> insertCatHat() {
         log.info("[" + TypeAccessoriesCat.HAT.getDescription() + "]" + DATABASE_CREATE);
-        return ResponseEntity.status(HttpStatus.CREATED).body(catClientFlow.insertImagesUrlsWithSunglassesOrHats(TypeAccessoriesCat.HAT));
+        return ResponseEntity.status(HttpStatus.CREATED).body(catClientService.insertImagesUrlsWithSunglassesOrHats(TypeAccessoriesCat.HAT));
     }
 }

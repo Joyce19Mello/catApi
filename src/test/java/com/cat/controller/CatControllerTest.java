@@ -79,18 +79,18 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
 
         var list = mockBreeds();
 
-        log.info("testFindAll() – findAll() to return " + list);
+        log.info("findAllBreeds() findAll() to return " + list);
         when(breedsRepository.findAll()).thenReturn(list);
 
-        log.info("testFindAll() – findAll() calling");
+        log.info("findAllBreeds() findAll() calling");
         List<BreedsModel> result = breedsRepository.findAll();
 
-        log.info("testFindAll() – Verifying findAll() is called at least once");
+        log.info("findAllBreeds() Verifying findAll() is called at least once");
         verify(breedsRepository, atLeastOnce()).findAll();
 
         var resultController = controller.getBreeds().getBody();
 
-        log.info("testFindAll() – Asserting that the result is not null or empty");
+        log.info("findAllBreeds() Asserting that the result is not null or empty");
         assertNotNull(result);
         assertFalse(result.isEmpty());
         assertEquals(result, resultController);

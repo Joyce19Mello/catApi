@@ -1,5 +1,5 @@
 # CatApi
-Aplicação que coleta dados da Api de gatos disponível em https://thecatapi.com/, salvar algumas informações em um banco de dados RDS AWS e fornecendo uma Api onde é possível realizar 4 operações distintas:
+Aplicação que coleta dados da Api de gatos disponível em https://thecatapi.com/, salva suas informações em um banco de dados RDS AWS e fornece 4 operações distintas:
 - listar todas as raças
 - listar as informações de uma raça 
 - listar as raças que contém determinado temperamento
@@ -37,6 +37,11 @@ Quando tudo estiver inserido no banco podemos utilizar dos endpoints de consulta
  - Trazer o registro no banco de uma raça especifica - http://localhost:8080/cat-api-itau/v1-cat-api/cat/breed?breed=abys
  - Trazer o registro no banco de uma origem especifica - http://localhost:8080/cat-api-itau/v1-cat-api/cat/breed/origin?origin=United%20States
  - Trazer o registro no banco de um temperamento especifico - http://localhost:8080/cat-api-itau/v1-cat-api/cat/breed/temperament?temperament=Active%20
+
+##### Execução via DOCKER
+ - Entrar na pasta raiz do projeto
+   - Digitar o seguinte comando:
+     - sudo docker-compose up --build --force-recreate
 
 # Coleção Postman
 ![Alt text](docs/CatApiPostman.png?raw=true "Collection in Postman")

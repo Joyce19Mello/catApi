@@ -1,0 +1,3157 @@
+{
+	"info": {
+		"_postman_id": "125cc1cc-0e1c-469b-97f1-544a67a7e43e",
+		"name": "cat-api-itau API",
+		"description": "#### Aplicação desenvolvida para fins de um processo seletivo. A mesma consta com banco de dados relacional mysql(RDS) na AWS \n- **Fazemos o uso da api https://api.thecatapi.com/v1/ para popular o banco**: A api traz informações de raça, imagens entre outras\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "error",
+			"item": [
+				{
+					"name": "error",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/error",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"error"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"error"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v1-cat-api-databse",
+			"item": [
+				{
+					"name": "Inserindo dados de raça api.thecatapi.com no banco de dados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1-cat-api-databse",
+								"breeds",
+								"apiTheCat"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserção na base de dados concluida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "consectetur laborum dolore in ut"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"breeds",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Limpar base de dados para futuras inserções",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1-cat-api-databse",
+								"cleanup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Limpeza do banco concluida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "consectetur laborum dolore in ut"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"cleanup"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Inserindo dados de urls de gatos de chapéu da api.thecatapi.com no banco de dados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1-cat-api-databse",
+								"insert",
+								"hats",
+								"apiTheCat"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserção na base de dados concluida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "consectetur laborum dolore in ut"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"insert",
+										"hats",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Inserindo dados de urls de gatos de óculos da api.thecatapi.com no banco de dados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1-cat-api-databse",
+								"sunglasses",
+								"apiTheCat"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserção na base de dados concluida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "consectetur laborum dolore in ut"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api-databse",
+										"sunglasses",
+										"apiTheCat"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v1-cat-api",
+			"item": [
+				{
+					"name": "breeds",
+					"item": [
+						{
+							"name": "Trazer todos os registros no banco de raças",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/breeds",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"breeds"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Busca por dados de raça concluída",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Inserir dados de raça no banco de dados",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"breeds",
+										"insert"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Inserção na base de dados concluida",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/breeds/insert",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"breeds",
+												"insert"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cat/breed",
+					"item": [
+						{
+							"name": "Trazer o registro no banco de uma raça específica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"cat",
+										"breed"
+									],
+									"query": [
+										{
+											"key": "breed",
+											"value": "abys",
+											"description": "(Required) Raça do gato"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Busca por raça concluída",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed"
+											],
+											"query": [
+												{
+													"key": "breed",
+													"value": "abys"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed"
+											],
+											"query": [
+												{
+													"key": "breed",
+													"value": "abys"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed"
+											],
+											"query": [
+												{
+													"key": "breed",
+													"value": "abys"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed"
+											],
+											"query": [
+												{
+													"key": "breed",
+													"value": "abys"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed?breed=abys",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed"
+											],
+											"query": [
+												{
+													"key": "breed",
+													"value": "abys"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Trazer o registro no banco de uma origem específica",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"cat",
+										"breed",
+										"origin"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "United States ou United Arab Emirates",
+											"description": "(Required) Origem do gato"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Busca por origem concluída",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"origin"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "United States ou United Arab Emirates"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"origin"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "United States ou United Arab Emirates"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"origin"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "United States ou United Arab Emirates"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"origin"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "United States ou United Arab Emirates"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/origin?origin=United States ou United Arab Emirates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"origin"
+											],
+											"query": [
+												{
+													"key": "origin",
+													"value": "United States ou United Arab Emirates"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Trazer o registro no banco de um temperamento específico",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"cat",
+										"breed",
+										"temperament"
+									],
+									"query": [
+										{
+											"key": "temperament",
+											"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"description": "(Required) Temperamento do gato, pode-se usar somente um dos temperamentos ou todos juntos"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Busca por raça concluída",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"temperament"
+											],
+											"query": [
+												{
+													"key": "temperament",
+													"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"temperament"
+											],
+											"query": [
+												{
+													"key": "temperament",
+													"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"temperament"
+											],
+											"query": [
+												{
+													"key": "temperament",
+													"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"temperament"
+											],
+											"query": [
+												{
+													"key": "temperament",
+													"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1-cat-api/cat/breed/temperament?temperament=Active ou Energetic, Active, Independent, Intelligent, Gentle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1-cat-api",
+												"cat",
+												"breed",
+												"temperament"
+											],
+											"query": [
+												{
+													"key": "temperament",
+													"value": "Active ou Energetic, Active, Independent, Intelligent, Gentle"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Inserir dados de acessórios de gatos no banco de dados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1-cat-api",
+								"accessories",
+								"insert"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserção na base de dados concluida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1-cat-api/accessories/insert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1-cat-api",
+										"accessories",
+										"insert"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/cat-api-itau"
+		}
+	]
+}

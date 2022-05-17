@@ -1,0 +1,27 @@
+version: '3'
+services:
+  cat_mysql:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: cat_mysql/api
+    ports:
+      - '8080:8080'
+      - '5005:5005'
+    environment:
+      - ADDITIONAL_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xmx1G -Xms128m -XX:MaxMetaspaceSize=128m
+      - PROFILE=dev
+    links:
+      - database-2cijwravnzoxvus-east-1rdsamazonawscom
+  database-2cijwravnzoxvus-east-1rdsamazonawscom:
+    image: mysql:8.0.28
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=catapi
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin1234
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./docker/volume_mysql:/var/lib/mysql

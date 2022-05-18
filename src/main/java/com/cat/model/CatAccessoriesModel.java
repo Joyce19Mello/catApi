@@ -1,7 +1,5 @@
 package com.cat.model;
 
-import com.cat.mapper.CatAccessoriesMapper;
-import com.cat.request.CatAccessoriesRequest;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -43,11 +41,6 @@ public class CatAccessoriesModel {
 
     @Column(name = "type_accessorie")
     private String typeAccessoriesCat;
-
-
-    public CatAccessoriesRequest toDTO() {
-        return CatAccessoriesMapper.INSTANCE.catAccessoriesToRequest(this);
-    }
 
     @Override
     public boolean equals(Object o) {

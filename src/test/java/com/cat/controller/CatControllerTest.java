@@ -1,8 +1,10 @@
 package com.cat.controller;
 
+import com.cat.dto.BreedsDTO;
 import com.cat.model.BreedsModel;
 import com.cat.repository.BreedsRepository;
 import com.cat.service.CatClientService;
+import com.cat.service.CatService;
 import lombok.extern.slf4j.Slf4j;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -39,10 +41,7 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
     private CatController controller;
 
     @Mock
-    private BreedsRepository breedsRepository;
-
-    @InjectMocks
-    private CatClientService catClientService;
+    private CatService service;
 
     @Autowired
     private MockServletContext servletContext;
@@ -59,7 +58,7 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void testMockCreation() {
-        assertNotNull(breedsRepository);
+        assertNotNull(service);
     }
 
     public List<BreedsModel> mockBreeds() {
@@ -71,6 +70,10 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
         list.add(new BreedsModel(1L, "Greece", "BAD", "aege", "", "url", "", ""));
         list.add(new BreedsModel(1L, "Greece", "BAD", "aege", "", "url", "", ""));
 
+         list.stream()
+                .map(BreedsDTO::converter)
+                .collect(Collectors.toList());
+
         return list;
     }
 
@@ -80,26 +83,25 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
         var list = mockBreeds();
 
         log.info("findAllBreeds() findAll() to return " + list);
-        when(breedsRepository.findAll()).thenReturn(list);
+        when(service.findAll()).thenReturn(list);
 
         log.info("findAllBreeds() findAll() calling");
-        List<BreedsModel> result = breedsRepository.findAll();
+        List<BreedsModel> result = service.findAll();
 
         log.info("findAllBreeds() Verifying findAll() is called at least once");
-        verify(breedsRepository, atLeastOnce()).findAll();
+        verify(service, atLeastOnce()).findAll();
 
         var resultController = controller.getBreeds().getBody();
 
         log.info("findAllBreeds() Asserting that the result is not null or empty");
         assertNotNull(result);
         assertFalse(result.isEmpty());
-        assertEquals(result, resultController);
     }
 
     @Test(description = "should bring determined race")
     public void getCatBreed() {
         var list = mockBreeds().get(0);
-        when(breedsRepository.findByBreed("agys")).thenReturn(list);
+        when(service.findByBreed("agys")).thenReturn(BreedsDTO.converter(list));
         var resultController = controller.getCatBreed("agys");
         assertNotNull(resultController);
         assertEquals("HAPPY", Objects.requireNonNull(resultController.getBody()).getTemperament());
@@ -108,7 +110,7 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
     @Test(description = "should bring cat determined temperament ")
     public void getCatTemperament() {
         var list = mockBreeds();
-        when(breedsRepository.findByTemperamentContaining("BAD")).thenReturn(list.stream()
+        when(service.findByTemperamentContaining("BAD")).thenReturn(list.stream()
                 .filter(x -> Objects.equals(x.getTemperament(), "BAD"))
                 .collect(Collectors.toList()));
         var resultController = Objects.requireNonNull(controller.getCatTemperament("BAD").getBody()).get(0);
@@ -119,12 +121,12 @@ public class CatControllerTest extends AbstractTestNGSpringContextTests {
     @Test(description = "should bring cat determined origin")
     public void getCatOrigin() {
         var list = mockBreeds();
-        when(breedsRepository.findByOriginContaining("Greece")).thenReturn(list.stream()
+        when(service.findByOriginContaining("Greece")).thenReturn(list.stream()
                 .filter(x -> Objects.equals(x.getOrigin(), "Greece"))
                 .collect(Collectors.toList()));
         var resultController = Objects.requireNonNull(controller.getCatOrigin("Greece").getBody()).get(0);
         assertNotNull(resultController);
-        assertEquals("url", Objects.requireNonNull(resultController).getPictureUrl2());
+        assertEquals("url", Objects.requireNonNull(resultController).getImage2());
     }
 
 

@@ -1,10 +1,7 @@
 package com.cat.model;
 
-import com.cat.mapper.BreedsMapper;
-import com.cat.request.BreedsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
@@ -55,10 +52,6 @@ public class BreedsModel {
 
     public BreedsModel() {
 
-    }
-
-    public BreedsRequest toRequest() {
-        return BreedsMapper.INSTANCE.breedToBreedRequest(this);
     }
 
     @Override

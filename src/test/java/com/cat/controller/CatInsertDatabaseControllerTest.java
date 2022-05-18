@@ -1,9 +1,11 @@
 package com.cat.controller;
 
+import com.cat.dto.BreedsDTO;
 import com.cat.model.BreedsModel;
 import com.cat.model.TypeAccessoriesCat;
 import com.cat.repository.BreedsRepository;
 import com.cat.service.CatClientService;
+import com.cat.service.CatService;
 import lombok.extern.slf4j.Slf4j;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -32,7 +34,7 @@ public class CatInsertDatabaseControllerTest extends AbstractTestNGSpringContext
     private CatInsertDatabaseController controller;
 
     @Mock
-    private BreedsRepository breedsRepository;
+    private CatService service;
 
     @Mock
     private CatClientService catClientService;
@@ -57,8 +59,8 @@ public class CatInsertDatabaseControllerTest extends AbstractTestNGSpringContext
         BreedsModel breed = new BreedsModel();
         breed.setBreed("agys");
 
-        when(breedsRepository.findByBreed("agys")).thenReturn(breed);
-        when(breedsRepository.findAll()).thenReturn(new ArrayList<>());
+        when(service.findByBreed("agys")).thenReturn(BreedsDTO.converter(breed));
+        when(service.findAll()).thenReturn(new ArrayList<>());
         when(catClientService.insertBreed()).thenReturn("Insercao na base de dados concluida");
 
         var result = controller.insertBreeds().getBody();

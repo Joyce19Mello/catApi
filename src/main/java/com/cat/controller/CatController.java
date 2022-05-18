@@ -1,13 +1,14 @@
 package com.cat.controller;
 
 import com.cat.config.SwaggerConfig;
+import com.cat.dto.BreedsDTO;
 import com.cat.request.BreedsRequest;
 import com.cat.request.CatAccessoriesRequest;
 import com.cat.exception.BusinessErrorResponse;
 import com.cat.model.BreedsModel;
 import com.cat.model.CatAccessoriesModel;
-import com.cat.repository.BreedsRepository;
 import com.cat.repository.CatAccessoriesRepository;
+import com.cat.service.CatService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -38,10 +40,7 @@ public class CatController {
     private static String DATABASE_CREATE = " Inserindo dados no banco de dados";
 
     @Autowired
-    private BreedsRepository breedsRepository;
-
-    @Autowired
-    private CatAccessoriesRepository catAccessoriesRepository;
+    private CatService service;
 
     @ApiOperation("Inserir dados de raça no banco de dados")
     @ApiResponses({
@@ -55,7 +54,7 @@ public class CatController {
     @PostMapping("/breeds/insert")
     public ResponseEntity<BreedsModel> insertBreeds(@RequestBody @Valid BreedsRequest request) {
         log.info(DATABASE_CREATE);
-        return ResponseEntity.status(HttpStatus.CREATED).body(breedsRepository.save(request.toEntity()));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(request));
     }
 
     @ApiOperation("Trazer todos os registros no banco de raças")
@@ -68,9 +67,13 @@ public class CatController {
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
     @GetMapping("/breeds")
-    public ResponseEntity<List<BreedsModel>> getBreeds() {
+    public ResponseEntity<List<BreedsDTO>> getBreeds() {
         log.info(DATABASE_CREATE);
-        return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(service.findAll()
+                .stream()
+                .map(BreedsDTO::converter)
+                .collect(Collectors.toList())
+        );
     }
 
     @ApiOperation("Trazer o registro no banco de uma raça específica")
@@ -83,10 +86,10 @@ public class CatController {
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed")
-    public ResponseEntity<BreedsModel> getCatBreed(@ApiParam(value = "Raça do gato", example = "abys", required = true)
-                                                      @RequestParam(value = "breed") @Valid String breed) {
+    public ResponseEntity<BreedsDTO> getCatBreed(@ApiParam(value = "Raça do gato", example = "abys", required = true)
+                                                 @RequestParam(value = "breed") @Valid String breed) {
         log.info("Relizando a busca do gato pela raça" + breed);
-        return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByBreed(breed));
+        return ResponseEntity.status(HttpStatus.OK).body(service.findByBreed(breed));
     }
 
     @ApiOperation("Trazer o registro no banco de um temperamento específico")
@@ -99,10 +102,13 @@ public class CatController {
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed/temperament")
-    public ResponseEntity<List<BreedsModel>> getCatTemperament(@ApiParam(value = "Temperamento do gato, pode-se usar somente um dos temperamentos ou todos juntos", example = "Active ou Energetic, Active, Independent, Intelligent, Gentle", required = true)
-                                                               @RequestParam(value = "temperament") @Valid String temperament) {
+    public ResponseEntity<List<BreedsDTO>> getCatTemperament(@ApiParam(value = "Temperamento do gato, pode-se usar somente um dos temperamentos ou todos juntos", example = "Active ou Energetic, Active, Independent, Intelligent, Gentle", required = true)
+                                                             @RequestParam(value = "temperament") @Valid String temperament) {
         log.info("Relizando a busca do gato pelo temperamento a seguir: " + temperament);
-        return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByTemperamentContaining(temperament));
+        return ResponseEntity.status(HttpStatus.OK).body(service.findByTemperamentContaining(temperament)
+                .stream()
+                .map(BreedsDTO::converter)
+                .collect(Collectors.toList()));
     }
 
     @ApiOperation("Trazer o registro no banco de uma origem específica")
@@ -115,10 +121,13 @@ public class CatController {
                     message = "Bad Request",
                     response = BusinessErrorResponse.class)})
     @GetMapping("/cat/breed/origin")
-    public ResponseEntity<List<BreedsModel>> getCatOrigin(@ApiParam(value = "Origem do gato", example = "United States ou United Arab Emirates", required = true)
-                                                          @RequestParam(value = "origin") @Valid String origin) {
+    public ResponseEntity<List<BreedsDTO>> getCatOrigin(@ApiParam(value = "Origem do gato", example = "United States ou United Arab Emirates", required = true)
+                                                        @RequestParam(value = "origin") @Valid String origin) {
         log.info("Relizando a busca do gato pela origem a seguir: " + origin);
-        return ResponseEntity.status(HttpStatus.OK).body(breedsRepository.findByOriginContaining(origin));
+        return ResponseEntity.status(HttpStatus.OK).body(service.findByOriginContaining(origin)
+                .stream()
+                .map(BreedsDTO::converter)
+                .collect(Collectors.toList()));
     }
 
     @ApiOperation("Inserir dados de acessórios de gatos no banco de dados")
@@ -133,7 +142,7 @@ public class CatController {
     @PostMapping("/accessories/insert")
     public ResponseEntity<CatAccessoriesModel> insertAccessories(@RequestBody @Valid CatAccessoriesRequest request) {
         log.info("Insert in database");
-        return ResponseEntity.status(HttpStatus.CREATED).body(catAccessoriesRepository.save(request.toEntity()));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.saveCatAccessories(request));
     }
 
 }

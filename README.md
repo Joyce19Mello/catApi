@@ -24,13 +24,13 @@ O sistema foi criado com base no JPA e em duas classes principais:
   - Tipo de acessorio (Oculos ou Chapeu) (typeAccessoriesCat)
   
 Hoje o sistema consta com a base de dados preenchida e a mesma pode ser apagada pelo seguinte endpoint:
- - http://localhost:8080/cat-api-itau/v1-cat-api-databse/cleanup
+ - http://localhost:8080/cat-api-itau/v1-cat-api-database/cleanup
 Isso foi feito devido a necessidade de salvar dados no banco para poder ser utilizados pela controller CatController.
  - Pode-se fazer o seguinte cenário:
-   - Apagar a base de dados - http://localhost:8080/cat-api-itau/v1-cat-api-databse/cleanup
-   - Preencher os dados de raça - http://localhost:8080/cat-api-itau/v1-cat-api-databse/breeds/apiTheCat
-   - Preencher urls de gatos de oculos - http://localhost:8080/cat-api-itau/v1-cat-api-databse/sunglasses/apiTheCat
-   - Preencher urls de gatos de chapeu - http://localhost:8080/cat-api-itau/v1-cat-api-databse/insert/hats/apiTheCat
+   - Apagar a base de dados - http://localhost:8080/cat-api-itau/v1-cat-api-database/cleanup
+   - Preencher os dados de raça - http://localhost:8080/cat-api-itau/v1-cat-api-database/breeds/apiTheCat
+   - Preencher urls de gatos de oculos - http://localhost:8080/cat-api-itau/v1-cat-api-database/sunglasses/apiTheCat
+   - Preencher urls de gatos de chapeu - http://localhost:8080/cat-api-itau/v1-cat-api-database/insert/hats/apiTheCat
    
 Quando tudo estiver inserido no banco podemos utilizar dos endpoints de consultas
  - Trazer todos os registros no banco de raças - http://localhost:8080/v1-cat-api/breeds

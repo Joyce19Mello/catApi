@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "125cc1cc-0e1c-469b-97f1-544a67a7e43e",
+		"_postman_id": "fec5b905-7e8b-4498-877d-39c7c98d8e67",
 		"name": "cat-api-itau API",
 		"description": "#### Aplicação desenvolvida para fins de um processo seletivo. A mesma consta com banco de dados relacional mysql(RDS) na AWS \n- **Fazemos o uso da api https://api.thecatapi.com/v1/ para popular o banco**: A api traz informações de raça, imagens entre outras\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -983,7 +983,7 @@
 			]
 		},
 		{
-			"name": "v1-cat-api-databse",
+			"name": "v1-cat-api-database",
 			"item": [
 				{
 					"name": "Inserindo dados de raça api.thecatapi.com no banco de dados",
@@ -996,12 +996,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+							"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v1-cat-api-databse",
+								"v1-cat-api-database",
 								"breeds",
 								"apiTheCat"
 							]
@@ -1014,12 +1014,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1035,7 +1035,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "consectetur laborum dolore in ut"
+							"body": "in quis sed Lorem et"
 						},
 						{
 							"name": "Created",
@@ -1043,12 +1043,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1072,12 +1072,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1101,12 +1101,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1130,12 +1130,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1159,12 +1159,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/breeds/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/breeds/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"breeds",
 										"apiTheCat"
 									]
@@ -1195,12 +1195,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+							"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v1-cat-api-databse",
+								"v1-cat-api-database",
 								"cleanup"
 							]
 						}
@@ -1212,12 +1212,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1232,7 +1232,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "consectetur laborum dolore in ut"
+							"body": "in quis sed Lorem et"
 						},
 						{
 							"name": "Created",
@@ -1240,12 +1240,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1268,12 +1268,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1296,12 +1296,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1324,12 +1324,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1352,12 +1352,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/cleanup",
+									"raw": "{{baseUrl}}/v1-cat-api-database/cleanup",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"cleanup"
 									]
 								}
@@ -1387,12 +1387,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+							"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v1-cat-api-databse",
+								"v1-cat-api-database",
 								"insert",
 								"hats",
 								"apiTheCat"
@@ -1406,12 +1406,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1428,7 +1428,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "consectetur laborum dolore in ut"
+							"body": "in quis sed Lorem et"
 						},
 						{
 							"name": "Created",
@@ -1436,12 +1436,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1466,12 +1466,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1496,12 +1496,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1526,12 +1526,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1556,12 +1556,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/insert/hats/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/insert/hats/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"insert",
 										"hats",
 										"apiTheCat"
@@ -1593,12 +1593,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+							"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v1-cat-api-databse",
+								"v1-cat-api-database",
 								"sunglasses",
 								"apiTheCat"
 							]
@@ -1611,12 +1611,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1632,7 +1632,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "consectetur laborum dolore in ut"
+							"body": "in quis sed Lorem et"
 						},
 						{
 							"name": "Created",
@@ -1640,12 +1640,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1669,12 +1669,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1698,12 +1698,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1727,12 +1727,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1756,12 +1756,12 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/v1-cat-api-databse/sunglasses/apiTheCat",
+									"raw": "{{baseUrl}}/v1-cat-api-database/sunglasses/apiTheCat",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1-cat-api-databse",
+										"v1-cat-api-database",
 										"sunglasses",
 										"apiTheCat"
 									]
@@ -1969,7 +1969,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+									"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1996,7 +1996,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2034,7 +2034,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2072,7 +2072,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2110,7 +2110,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2148,7 +2148,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2186,7 +2186,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 64593791,\n    \"id\": \"sit officia\",\n    \"url\": \"do est dolore Lorem\",\n    \"width\": -33589163\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"fugiat dolor\"\n}",
+											"raw": "{\n  \"description\": \"Fácil de cuidar e afetuoso\",\n  \"id\": \"abys\",\n  \"image\": {\n    \"height\": 22722605,\n    \"id\": \"voluptate\",\n    \"url\": \"reprehenderit elit cupidatat amet Duis\",\n    \"width\": 33902529\n  },\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"origin\": \"Egypt\",\n  \"temperament\": \"Ut commodo est dolore\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2875,7 +2875,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+							"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2902,7 +2902,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2940,7 +2940,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2978,7 +2978,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3016,7 +3016,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3054,7 +3054,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3092,7 +3092,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"deserunt ex velit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
+									"raw": "{\n  \"id\": \"abys\",\n  \"image2\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"image3\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\",\n  \"typeAccessoriesCat\": \"in elit\",\n  \"url\": \"https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3151,7 +3151,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:8080/cat-api-itau"
+			"value": "localhost:8080/cat-api-itau"
 		}
 	]
 }

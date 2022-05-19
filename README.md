@@ -45,7 +45,7 @@ Quando tudo estiver inserido no banco podemos utilizar dos endpoints de consulta
 
 # Coleção Postman
 ![Alt text](docs/CatApiPostman.png?raw=true "Collection in Postman")
-- Link para acesso: https://documenter.getpostman.com/view/17655436/UyxjH7BT
+- Link para acesso: https://documenter.getpostman.com/view/17655436/UyxnF5Wo
 
 
 # Swagger

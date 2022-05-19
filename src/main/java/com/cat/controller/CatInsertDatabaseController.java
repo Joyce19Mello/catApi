@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-@RequestMapping("/v1-cat-api-databse")
+@RequestMapping("/v1-cat-api-database")
 @CrossOrigin("*")
 @Api(value = "v1-cat-api-insert", tags = {SwaggerConfig.CAT_INSERT_DATABASE_CONTROLLER})
 public class CatInsertDatabaseController {
